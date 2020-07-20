@@ -1,0 +1,3 @@
+#Readme
+A dumb one page js app that calculates conception date (and if it was on a US public holiday) from birthdate and premature offset.
+Uses vuejs and momentjs for the hard work.
