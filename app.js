@@ -49,7 +49,7 @@ new Vue({
                 this.ontimeoptions.push({text:"on time", value: "0"});
             } else {
                
-                this.ontimeoptions.push({text: Math.abs(i).toString() + (Math.abs(i)>1 ? "weeks" : "week") +  (i<0 ? "early" : "late"), value: i});
+                this.ontimeoptions.push({text: Math.abs(i).toString() + " " + (Math.abs(i)>1 ? "weeks" : "week") + " " + (i<0 ? "early" : "late"), value: i});
             }
             
            
