@@ -1,7 +1,6 @@
 new Vue({
     el: '#app',
     data: {
-            test: "test1",
             info: null,
             loading: true,
             errored: false,
@@ -10,7 +9,6 @@ new Vue({
             bd: null,
             ontime:0,
             ontimeoptions: []
-               
     },
     filters: {
         formatdate(value) {
