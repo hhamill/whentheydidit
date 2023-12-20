@@ -65,6 +65,6 @@ Vue.createApp({
            return;
        }
 
-       this.calculate();
+       this.methods.calculate();
     }
 }).mount('#app')
