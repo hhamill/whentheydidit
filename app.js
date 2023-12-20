@@ -1,6 +1,7 @@
-new Vue({
-    el: '#app',
-    data: {
+
+Vue.createApp({
+    data() {
+            return {
             info: null,
             loading: true,
             errored: false,
@@ -9,18 +10,22 @@ new Vue({
             bd: null,
             ontime:0,
             ontimeoptions: []
+            }
     },
-    filters: {
-        formatdate(value) {
-            var d = moment(value);
-            d.utc();
-            return d.format("DD-MMM-YYYY");
-        },
-        abs(value) {
-           return Math.abs(value);
+    filters() {
+        return {
+            formatdate(value) {
+                var d = moment(value);
+                d.utc();
+                return d.format("DD-MMM-YYYY");
+            },
+            abs(value) {
+            return Math.abs(value);
+            }
         }
     },
-    methods: {
+    methods() {
+        return {
         calculate() {
             if (this.bindbd==null) {
                 return;
@@ -42,6 +47,7 @@ new Vue({
             this.ontime=0;
             this.calculate();
         }
+    }
     },
     mounted() {
         for (i = -12; i < 13; i++) {
@@ -61,4 +67,4 @@ new Vue({
 
        this.calculate();
     }
-})
+}).mount('#app')
